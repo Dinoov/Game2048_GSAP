@@ -1,0 +1,165 @@
+/* Стилізація всіх елементів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Змінні CSS */
+:root {
+  --index: calc(
+    1vw + 1vh
+  ); /* Змінна для обчислення розмірів на основі ширини та висоти вікна */
+  --up_gallery: calc(
+    var(--index) * 22
+  ); /* Змінна для встановлення відступа між контентом*/
+}
+
+/* Основні стилі для тіла документа */
+body {
+  background-color: #0e2d21;
+  color: #efbf7f;
+  font-family: "Mulish", sans-serif;
+  overflow-x: hidden; /* Відключення горизонтального прокручування */
+}
+
+/* Стилі для заголовків */
+.item {
+  padding: 3vh 6vw;
+  max-width: 100%;
+}
+
+.top_header {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  flex: 1 1 auto;
+  flex-basis: 300vh;
+  min-width: 0;
+}
+
+.title {
+  flex: 1 1 auto;
+  font-size: calc(var(--index) * 5);
+  font-family: "Mulish", sans-serif;
+  min-width: 0;
+  line-height: 0.9;
+}
+
+/* ---------------------------------------------------------- M A I N  ----------------------------------------------------------*/
+
+/* Стилі для основного контенту */
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: justify;
+  display: flex;
+  padding: calc(var(--index) * 12) 0;
+}
+
+/* Стилі для зображень в галереї */
+.flex-img {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 10vh 6vw;
+  max-width: 100%;
+}
+
+/* Стилі для другого зображення в галереї */
+.flex-img-2 {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 10vh 6vw;
+  max-width: 100%;
+  padding-top: 40vh;
+  padding-right: 6vw;
+  padding-bottom: 2vh;
+  padding-left: 6vw;
+}
+
+/* Стилі для текстових блоків */
+.flex-item {
+  flex-basis: 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.text_h2 {
+  flex: 1 1 auto;
+  display: flex;
+  font-family: "Mulish", sans-serif;
+  font-size: calc(var(--index) * 3);
+}
+
+.flex-container p {
+  flex: 1 1 auto;
+  display: flex;
+  font-size: calc(var(--index) * 1.35);
+}
+
+.block_text {
+  padding: 18vh 6vw;
+}
+
+.block_text_1 {
+  padding-top: 20vh;
+  padding-right: 6vw;
+  padding-left: 6vw;
+}
+
+/* ---------------------------------------------------------- Footer  ----------------------------------------------------------*/
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Стилі для кнопки з посиланням */
+.ppp {
+  font-size: calc(var(--index) * 2);
+  padding: 40px 40px;
+  background-color: #efbf7f;
+  color: #0e2b07;
+  border-radius: 20px;
+  margin-bottom: 40vh;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Стилі для анімації завантажувача */
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: #0e2d21;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  transition: 0.9s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.loader {
+  width: calc(100px / cos(35deg));
+  height: 20px;
+  border-radius: 7px;
+  background: repeating-linear-gradient(-35deg, #efbf7f 0 15px, #0e2d21 0 20px)
+    left/200% 200%;
+  animation: l3 2s infinite linear;
+}
+
+@keyframes l3 {
+  100% {
+    background-position: right;
+  }
+}

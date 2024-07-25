@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Мета-теги для налаштування документа -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048</title>
+    <!-- Підключення скриптів -->
+    <script src="gsap/gsap.min.js" defer></script>
+    <script src="gsap/ScrollTrigger.min.js" defer></script>
+    <script src="gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Підключення зовнішніх шрифтів -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="mask">
+      <!-- Анімований прогрес-бар під час завантаження сторінки -->
+      <div class="loader"></div>
+    </div>
+    <div class="wrapper">
+      <!-- Вміст сторінки -->
+      <div class="content">
+        <header>
+          <div class="top_header">
+            <!-- Заголовок сторінки з анімацією -->
+            <h1 data-speed=".8" class="item title">
+              ваш розум проти числового генія
+            </h1>
+            <img
+              data-speed="1"
+              class="item logo"
+              src="pictures/111.png"
+              alt=""
+            />
+          </div>
+        </header>
+        <!-- Основний контент сторінки -->
+        <main class="flex-container">
+          <!-- Ліва колонка з картинкою та текстом -->
+          <div class="left__column">
+            <img class="flex-img" src="pictures/who.jpg" alt="" />
+            <!-- Блок тексту -->
+            <div class="block_text">
+              <h2 class="flex-item text_h2">Розробка</h2>
+              <p class="flex-item">
+                За словами автора, наведеними в газеті «Los Angeles Times», гру
+                «2048» було написано менш ніж за два дні як вправу в
+                програмуванні. Чіруллі вважає своє творіння «випадковим
+                вторгненням в ігрову індустрію» та не планує надалі займатися
+                розробкою ігор. Прообразом «2048» є комерційна гра Threes, чиї
+                творці залишилися незадоволеними успіхом «2048» і назвали гру
+                Чіруллі «зіпсованим плагіатом».
+              </p>
+            </div>
+            <img class="flex-img" src="pictures/rules.jpg" alt="" />
+          </div>
+          <!-- Права колонка з текстом та зображенням -->
+          <div class="right__column">
+            <!-- Блок тексту -->
+            <div class="block_text_1">
+              <h2 class="flex-item text_h2">Хто? Як? Коли?</h2>
+              <p class="flex-item">
+                2048 — відеогра, початково браузерна, написана 19-річним
+                італійським розробником Габріелем Чіруллі мовою програмування
+                JavaScript. Гра є числовою головоломкою з полем у формі квадрата
+                4x4 клітинки. Мета гри — складаючи плитки з числами, отримати
+                плитку номіналу «2048», звідки й назва.
+              </p>
+            </div>
+            <!-- Зображення -->
+            <img class="flex-img-2" src="pictures/brain.jpg" alt="" />
+            <!-- Блок тексту -->
+            <div class="block_text">
+              <h2 class="flex-item text_h2">Правила гри</h2>
+              <p class="flex-item">
+                Гравець керує рухом чисел на дошці з чотирма напрямками: вгору,
+                вниз, вліво та вправо. Кожне натискання стрілки зміщує всі числа
+                на дошці у вказаному напрямку на максимальну відстань, поки вони
+                не натраплять на межі дошки або на іншу плитку. Якщо дві плитки
+                з однаковими числами зіткнуться, вони об'єднуються в одну, сума
+                чисел на якій дорівнює їх сумі. Мета гри - досягти плитки з
+                числом 2048, об'єднуючи числа на дошці, та продовжувати гру,
+                якщо це можливо.
+              </p>
+            </div>
+          </div>
+        </main>
+        <footer class="footer">
+          <!-- Посилання на сторінку з грою -->
+          <a class="ppp" href="game.html">спробуй себе</a>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
